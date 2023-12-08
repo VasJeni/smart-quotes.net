@@ -15,8 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
+from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("pages.urls")),  # new
+    # Needed for locale change
+    path("i18n/", include("django.conf.urls.i18n")),
 ]
+urlpatterns += i18n_patterns(
+    path("", include("pages.urls")),
+)
+
+if settings.DEBUG:  # new
+    import debug_toolbar
+
+    urlpatterns = [
+        path("__debug__/", include(debug_toolbar.urls)),
+    ] + urlpatterns

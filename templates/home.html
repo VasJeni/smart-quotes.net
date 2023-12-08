@@ -1,6 +1,22 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% block title %}Smart Quotes{% endblock title%}
 
 {% block content %}
     <h1>This is homepage!</h1>
+    {% translate "Our Services" %}
+        {% for service in service_list %}
+        <div>
+            {% if lang == "en" %}
+            <p>service title = {{service.title_en}}</p>
+            <p>service description = {{service.description_en}}</p>
+            {% elif lang == 'uk' %}
+            <p>service title = {{service.title_uk}}</p>
+            <p>service description = {{service.description_uk}}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <div>
+            <p>lang = {{lang}}</p>
+        </div>
 {% endblock content %}

@@ -1,6 +1,12 @@
 {% load static %}
+{% load i18n %}
+
+
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% get_current_language as LANGUAGE_CODE %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +15,29 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+
+    <!-- i18n form-->
+<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="/">
+    <select name="language" onchange="this.form.submit()">
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE%} selected {% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+</form>
+<hr>
+{% translate "Simple string" %}
+<hr>
+{% for variable in context %}
+    {{ variable }}
+{% endfor %}
+
+
+
     <div class="container">
     {% block content %}    
     <h1>Base layout</h1>
