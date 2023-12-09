@@ -13,10 +13,11 @@
             {% elif lang == 'uk' %}
             <p>service title = {{service.title_uk}}</p>
             <p>service description = {{service.description_uk}}</p>
+            <hr>
             {% endif %}
         </div>
         {% endfor %}
-        <hr>
+        <hr><hr><hr>
         <h1>Feedbacks</h1>
 
         {% for feedback in feedbacks %}
@@ -27,7 +28,7 @@
             {% elif lang == 'uk' %}
             <p>{{ feedback.feedback_uk }}</p>
             {% endif %}
-            <p></p>
+            <hr>
         {% endfor %}
         <div>
             <h2>lang = {{lang}}</h2>
