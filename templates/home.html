@@ -5,7 +5,7 @@
 {% block content %}
     <h1>This is homepage!</h1>
     {% translate "Our Services" %}
-        {% for service in service_list %}
+        {% for service in services %}
         <div>
             {% if lang == "en" %}
             <p>service title = {{service.title_en}}</p>
@@ -16,7 +16,20 @@
             {% endif %}
         </div>
         {% endfor %}
+        <hr>
+        <h1>Feedbacks</h1>
+
+        {% for feedback in feedbacks %}
+            <p>{{ feedback.author }}</p>
+            <p>{{feedback.company}}</p>
+            {% if lang == "en" %}
+            <p>{{ feedback.feedback_en }}</p>
+            {% elif lang == 'uk' %}
+            <p>{{ feedback.feedback_uk }}</p>
+            {% endif %}
+            <p></p>
+        {% endfor %}
         <div>
-            <p>lang = {{lang}}</p>
+            <h2>lang = {{lang}}</h2>
         </div>
 {% endblock content %}
