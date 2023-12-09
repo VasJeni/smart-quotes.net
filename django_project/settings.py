@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     # Local
     "accounts.apps.AccountsConfig",  # new
     "pages.apps.PagesConfig",  # new
-    "services.apps.ServicesConfig",
+    "services.apps.ServicesConfig",  # new
+    "feedback.apps.FeedbackConfig",  # new
 ]
 
 MIDDLEWARE = [

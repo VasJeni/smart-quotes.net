@@ -11,14 +11,8 @@ class HomePageView(ListView):
     template_name = "home.html"
 
     def get_queryset(self):
-        language = get_language_from_request(self.request)
-
-        if language == "uk":
-            # Витягуємо дані з першої та другої колонок бази даних
-            return Services.objects.only("title_uk", "description_uk")
-        else:
-            # Витягуємо дані з третьої та четвертої колонок бази даних
-            return Services.objects.only("title_en", "description_en")
+        services = Services.objects.all()
+        return services
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
