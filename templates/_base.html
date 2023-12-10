@@ -15,6 +15,26 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+    <header class="primary-header flex">
+        <div>
+            <a href="{% url 'home' %}"><img src="/static/images/cropped-logo-1.png" alt="Smart-Quotes logo" class="logo"></a>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigations" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav class="flex">
+            <ul data-visible="false" id="primary-navigation" class="primary-navigation flex">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </nav> </header>
+    
 
     <!-- i18n form-->
 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
@@ -32,9 +52,6 @@
 <hr>
 {% translate "Simple string" %}
 <hr>
-{% for variable in context %}
-    {{ variable }}
-{% endfor %}
 
 
 

@@ -7,8 +7,6 @@ from django.utils.translation import get_language_from_request
 
 
 class HomePageView(ListView):
-    # model = Services
-    # context_object_name = "service_list"
     template_name = "home.html"
 
     def get_queryset(self):
