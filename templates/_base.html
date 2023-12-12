@@ -17,7 +17,7 @@
 <body>
     <header class="primary-header flex">
         <div>
-            <a href="{% url 'home' %}"><img src="/static/images/cropped-logo-1.png" alt="Smart-Quotes logo" class="logo"></a>
+            <a href="{% url 'home' %}"><img src="{% static 'images/cropped-logo-1.png'%}" alt="Smart-Quotes logo" class="logo"></a>
         </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigations" aria-expanded="false">
             <span class="sr-only">Menu</span>
@@ -32,19 +32,23 @@
                 <li><a href="#">Contacts</a></li>
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">LinkedIn</a></li>
+
             </ul>
         </nav> </header>
     
 
     <!-- i18n form-->
-<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+<form action="{% url 'set_language' %}" method="post" class="input-lang">{% csrf_token %}
     <input name="next" type="hidden" value="/">
     <select name="language" onchange="this.form.submit()">
         {% get_available_languages as LANGUAGES %}
         {% get_language_info_list for LANGUAGES as languages %}
         {% for language in languages %}
             <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE%} selected {% endif %}>
-                {{ language.name_local }} ({{ language.code }})
+                {{ language.name_local }}
+                {% if language.code == 'en'%} 🇬🇧
+                {% elif language.code == 'uk' %}🇺🇦
+                {% endif %}
             </option>
         {% endfor %}
     </select>
