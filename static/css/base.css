@@ -394,6 +394,7 @@ template {
     flex-direction: column;
     padding: min(30vh, 10rem) 2rem;
     transform: translateX(100%);
+    transition: transform 350ms ease-in ;
   }
   .primary-navigation[data-visible='true'] {
     transform: translateX(0);
@@ -402,16 +403,70 @@ template {
     display: block;
     position: absolute;
     z-index: 9999;
-    background: url('../images/noun-hamburger-menu-547171.svg');
     background-repeat: none;
     width: 2rem;
     aspect-ratio: 1;
     top:2rem;
     right: 2rem;
-    color: transparent;
+    background-color: transparent;
     border: 0;
+    color: transparent;
+    overflow: hidden;
+    
   }
-  
+  .mobile-nav-toggle span{ 
+    position: absolute;
+    inset:50% 50%;
+    display: block;
+    background-color: transparent;
+    height: 5px;
+    width: 50%;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    border: 1px solid white;
+    box-sizing: border-box;
+  }
+  .mobile-nav-toggle span::before{
+    display: block;
+    content: '';
+    position: absolute;
+    left: -1px ;
+    bottom: -10px ;
+    border-radius: 2px;
+    border: 1px solid white;
+    height: 5px;
+    width: 16px;
+    box-sizing: border-box;
+  }
+  .mobile-nav-toggle span::after{
+    display: block;
+    content: '';
+    position: absolute;
+    left: -1px ;
+    top: -10px ;
+    border-radius: 2px;
+    border: 1px solid white;
+    height: 5px;
+    width: 16px;
+    box-sizing: border-box;
+  }
+  .mobile-nav-toggle[area-expanded='true'] span::before {
+    border: 1px solid white;
+    top: -1px;
+    rotate: 45deg;
+    transition : rotate 350ms ease-in;
+  }
+  .mobile-nav-toggle[area-expanded='true'] span::after {
+    border: 1px solid white;
+    top: -1px;
+    rotate: -45deg;
+    transition : rotate 350ms ease-in;
+  }
+  .mobile-nav-toggle[area-expanded='true'] span {
+    border-color: transparent;
+    transition : border-color 50ms ease-in;
+  }
 }
 
 body {
