@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 12:25+0000\n"
+"POT-Creation-Date: 2023-12-14 09:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,10 +21,46 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
+#: templates/_base.html:27
+msgid "Home"
+msgstr "Головна"
+
+#: templates/_base.html:28
+msgid "Services"
+msgstr "Послуги"
+
+#: templates/_base.html:29
+msgid "About"
+msgstr "Про нас"
+
+#: templates/_base.html:30
+msgid "Reviews"
+msgstr "Огляди"
+
+#: templates/_base.html:31
+msgid "Clients"
+msgstr "Клієнти"
+
+#: templates/_base.html:32
+msgid "Contacts"
+msgstr "Контакти"
+
 #: templates/_base.html:33
+msgid "Facebook"
+msgstr "Facebook"
+
+#: templates/_base.html:34
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: templates/_base.html:59
+msgid "WE HELP TECHNOLOGIES COMPANIES TO HIRE HIGH-PERFORMANCE TEAMS."
+msgstr "МИ ДОПОМАГАЄМО ТЕХНОЛОГІЧНИМ КОМПАНІЯМ НАЙМАТИ ВИСОКОЕФЕКТИВНІ КОМАНДИ."
+
+#: templates/_base.html:243
 msgid "Simple string"
 msgstr "Звичайна строка"
 
-#: templates/home.html:6
+#: templates/home.html:7
 msgid "Our Services"
 msgstr "Наші послуги"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 12:25+0000\n"
+"POT-Creation-Date: 2023-12-14 09:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: templates/_base.html:27
+msgid "Home"
+msgstr ""
+
+#: templates/_base.html:28
+#, fuzzy
+#| msgid "Our Services"
+msgid "Services"
+msgstr "Our Services"
+
+#: templates/_base.html:29
+msgid "About"
+msgstr ""
+
+#: templates/_base.html:30
+msgid "Reviews"
+msgstr ""
+
+#: templates/_base.html:31
+msgid "Clients"
+msgstr ""
+
+#: templates/_base.html:32
+msgid "Contacts"
+msgstr ""
+
 #: templates/_base.html:33
+msgid "Facebook"
+msgstr ""
+
+#: templates/_base.html:34
+msgid "LinkedIn"
+msgstr ""
+
+#: templates/_base.html:59
+msgid "WE HELP TECHNOLOGIES COMPANIES TO HIRE HIGH-PERFORMANCE TEAMS."
+msgstr ""
+
+#: templates/_base.html:243
 msgid "Simple string"
 msgstr "Simple string"
 
-#: templates/home.html:6
+#: templates/home.html:7
 msgid "Our Services"
 msgstr "Our Services"
