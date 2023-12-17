@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",  # new
     "services.apps.ServicesConfig",  # new
     "feedback.apps.FeedbackConfig",  # new
+    "advantage.apps.AdvantageConfig",  # new
 ]
 
 MIDDLEWARE = [
@@ -161,3 +162,8 @@ DEBUG = True
 
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+
+
+# MEDIA for load pics for cards
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
