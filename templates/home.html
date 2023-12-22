@@ -146,10 +146,10 @@
         <figure>
             <img src="{{ advantage.img.url}}" alt="{{ advantage.title_en}}">
             <figcaption>
-            {% if lang == "en" %}
+            {% if language_code == "en" %}
             <h3>{{advantage.title_en}}</h3>
             <p>{{advantage.description_en}}</p>
-            {% elif lang == 'uk' %}
+            {% elif language_code == 'uk' %}
             <h3>{{advantage.title_uk}}</h3>
             <p>{{advantage.description_uk}}</p>
             {% endif %}
@@ -165,10 +165,10 @@
     {% translate "Our Services" %}
         {% for service in services %}
         <div>
-            {% if lang == "en" %}
+            {% if language_code == "en" %}
             <p>service title = {{service.title_en}}</p>
             <p>service description = {{service.description_en}}</p>
-            {% elif lang == 'uk' %}
+            {% elif language_code == 'uk' %}
             <p>service title = {{service.title_uk}}</p>
             <p>service description = {{service.description_uk}}</p>
             <hr>

@@ -1,4 +1,5 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
+from django.utils import translation
 from django.urls import reverse, resolve
 
 from .views import HomePageView
@@ -6,7 +7,7 @@ from .views import HomePageView
 # Create your tests here.
 
 
-class HomepageTest(SimpleTestCase):
+class HomepageTest(TestCase):
     def setUp(self):
         url = reverse("home")
         self.response = self.client.get(url)
@@ -26,3 +27,9 @@ class HomepageTest(SimpleTestCase):
     def test_homepage_url_resolves_homepagaview(self):
         view = resolve("/")
         self.assertEqual(view.func.__name__, HomePageView.as_view().__name__)
+
+    # translations
+    def test_homepage_in_english(self):
+        translation.activate("en")  # Активуємо англійську мову
+        response = self.client.get(reverse("home"))
+        self.assertContains(response, '<html lang="en">')  # Перевірте англійський текст

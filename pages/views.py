@@ -22,7 +22,7 @@ class HomePageView(ListView):
         context["advantages"] = advantages
         context["services"] = services
         context["feedbacks"] = feedback
-        context["lang"] = get_language_from_request(self.request)
+        context["language_code"] = get_language_from_request(self.request)
         return context
 
 
