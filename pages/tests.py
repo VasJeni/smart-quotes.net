@@ -29,7 +29,13 @@ class HomepageTest(TestCase):
         self.assertEqual(view.func.__name__, HomePageView.as_view().__name__)
 
     # translations
+    # have to create bd for translate tests
     def test_homepage_in_english(self):
         translation.activate("en")  # Активуємо англійську мову
         response = self.client.get(reverse("home"))
         self.assertContains(response, '<html lang="en">')  # Перевірте англійський текст
+
+    def test_homepage_in_ukrainian(self):
+        translation.activate("uk")  # Активуємо українську мову
+        response = self.client.get(reverse("home"))
+        self.assertContains(response, '<html lang="uk"')  # Перевірте український текст
