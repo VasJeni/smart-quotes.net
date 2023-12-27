@@ -31,11 +31,18 @@ class HomepageTest(TestCase):
     # translations
     # have to create bd for translate tests
     def test_homepage_in_english(self):
-        translation.activate("en")  # Активуємо англійську мову
+        translation.activate("en")  # Activate en language
         response = self.client.get(reverse("home"))
-        self.assertContains(response, '<html lang="en">')  # Перевірте англійський текст
+        # self.assertContains(response, '<html lang="en">')
+        self.assertContains(
+            response, "WE HELP TECHNOLOGIES COMPANIES TO HIRE HIGH-PERFORMANCE TEAMS."
+        )
 
     def test_homepage_in_ukrainian(self):
-        translation.activate("uk")  # Активуємо українську мову
+        translation.activate("uk")  # # Activate ukranian
         response = self.client.get(reverse("home"))
-        self.assertContains(response, '<html lang="uk"')  # Перевірте український текст
+        # self.assertContains(response, '<html lang="uk">')
+        self.assertContains(
+            response,
+            "МИ ДОПОМАГАЄМО ТЕХНОЛОГІЧНИМ КОМПАНІЯМ НАЙМАТИ ВИСОКОЕФЕКТИВНІ КОМАНДИ.",
+        )

@@ -20,7 +20,7 @@ msgstr ""
 
 #: templates/_base.html:27
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: templates/_base.html:28
 #, fuzzy
@@ -30,31 +30,31 @@ msgstr "Our Services"
 
 #: templates/_base.html:29
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: templates/_base.html:30
 msgid "Reviews"
-msgstr ""
+msgstr "Reviews"
 
 #: templates/_base.html:31
 msgid "Clients"
-msgstr ""
+msgstr "Clients"
 
 #: templates/_base.html:32
 msgid "Contacts"
-msgstr ""
+msgstr "Contacts"
 
 #: templates/_base.html:33
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: templates/_base.html:34
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: templates/_base.html:59
 msgid "WE HELP TECHNOLOGIES COMPANIES TO HIRE HIGH-PERFORMANCE TEAMS."
-msgstr ""
+msgstr "WE HELP TECHNOLOGIES COMPANIES TO HIRE HIGH-PERFORMANCE TEAMS."
 
 #: templates/_base.html:243
 msgid "Simple string"
