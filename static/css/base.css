@@ -355,6 +355,8 @@ template {
   --font-f-subtitle: 'PT Sans';
   --font-f-text: 'Lato';
   --color-white: #fff;
+  --color-dark: #1b2433;
+  --color-grey: #7C8992;
 }
 
 .flex {
@@ -455,6 +457,21 @@ body {
 .advantages .container figure {
   width: 22%;
 }
+
+.advantages figure h3 {
+  font-family:var(--font-f-subtitle), sans-serif;
+  line-height: 1.8rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-dark);
+}
+.advantages figure p{
+  font-family: var(--font-f-text), sans-serif;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+  color: var(--color-grey);
+}
+
 
 @media (max-width: 35em) {
   .primary-navigation {
@@ -587,6 +604,14 @@ body {
     max-width: 1140px;
     margin: 0 auto;
   }
+  .advantages figure h3 {
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+  }
+  .advantages figure p{
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+  }
 }
 @media only screen and (min-width: 1201px){
   .container {
@@ -595,3 +620,21 @@ body {
     margin: 0 auto;
   }
 } 
+@media only screen and (min-width: 800px) and (max-width: 992px) {
+  .advantages figure h3 {
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+  }
+  .advantages figure p{
+    line-height: 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .advantages .container {
+    flex-direction: column;
+  }
+  .advantages .container figure {
+    width: 94%;
+  }
+}
