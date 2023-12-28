@@ -451,11 +451,12 @@ body {
   height: auto;
 }
 .advantages .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 .advantages .container figure {
-  width: 22%;
+  
 }
 
 .advantages figure h3 {
@@ -632,9 +633,7 @@ body {
 }
 @media only screen and (max-width: 800px) {
   .advantages .container {
-    flex-direction: column;
-  }
-  .advantages .container figure {
-    width: 94%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
   }
 }
