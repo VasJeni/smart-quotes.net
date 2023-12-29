@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_resized",  # new
     # Debug
     "debug_toolbar",
     # Local
@@ -167,3 +168,7 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # MEDIA for load pics for cards
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+# django resizer
+DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
+DJANGORESIZED_DEFAULT_KEEP_META = True
