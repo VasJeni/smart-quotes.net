@@ -6,7 +6,7 @@ from django_resized import ResizedImageField
 
 class Services(models.Model):
     img = ResizedImageField(
-        upload_to="servicePic",
+        upload_to="service",
         blank=True,
         size=[400, 600],
         max_length=1048576,

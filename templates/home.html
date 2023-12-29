@@ -144,7 +144,9 @@
     <div class="container">
         {% for advantage in advantages %}
         <figure>
+            {% if advantage.img.url %}
             <img src="{{ advantage.img.url}}" alt="{{ advantage.title_en}}">
+            {% endif %}
             <figcaption>
             {% if language_code == "en" %}
             <h3>{{advantage.title_en}}</h3>
@@ -162,6 +164,7 @@
     {% translate "Our Services" %}
         {% for service in services %}
         <div>
+            <img src="{{ service.img.url }}" alt="{{ service.name }}">
             {% if language_code == "en" %}
             <p>service title = {{service.title_en}}</p>
             <p>service description = {{service.description_en}}</p>
